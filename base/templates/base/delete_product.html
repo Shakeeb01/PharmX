@@ -1,0 +1,28 @@
+{% include 'navbar.html' %} {% block content %}
+
+<style>
+    form > div > a{
+        letter-spacing: 4px;
+        background-color: #ff6a00;
+        padding: 8px;
+        font-size: 15px;
+    }
+    form > div > button{
+        letter-spacing: 4px;
+        background-color: #ff6a00;
+        padding: 9px;
+        font-size: 15px;
+    }
+</style>
+<center>
+  <form method="POST" action="">
+    {% csrf_token %}
+    <div class="d-flex gap-2 flex-column w-50">
+      <h1 class="mt-5 fst-italic">Are You Sure You Want To Delete This Product?</h1>
+      <button class="text-white border border-dark rounded" type="submit">Confirm</button>
+      <a class="border border-dark rounded text-white text-decoration-none" href="{{request.META.HTTP_REFERER}}">Go Back</a>
+    </div>
+  </form>
+</center>
+
+{% endblock content %}

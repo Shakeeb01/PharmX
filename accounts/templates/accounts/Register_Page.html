@@ -1,0 +1,17 @@
+{% include 'navbar.html' %}
+
+{% block content %}
+<center>
+
+    <h1 class="mt-1">Register</h1>
+    <form class="w-75 text-start" method="POST" action="{% url 'register' %}">
+        {% csrf_token %}
+        {{form.as_p}}
+        
+        
+        <input type="submit" value="submit" class="btn border border-2 border-dark">
+    </form>
+</center>
+
+
+{% endblock content %}

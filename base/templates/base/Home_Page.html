@@ -7,51 +7,71 @@
             flex-direction: column;
           
         }
-        .heroSection{
-            color: white;
+        .hero-section {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100%;
-            width: 100vw;
-            gap: 20px;
-           
+            height: 100vh;
         }
-        h1{
-            font-size: 70px;
-            color: #FF6A00;
+        .container > h1{
+            font-size: 60px;
+            color: #ff6a00;
+            margin-bottom: 30px;
+            font-style: italic;
         }
-        p{
-            width: 700px;
-            text-align: center;
-            line-height: 40px;
-            letter-spacing: 1px;
-            font-size: 20px;
+        .buttons > a{
+            border: 1px solid #ff6a00 !important;
         }
-
-        div > a{
-            text-decoration: none;
-            color: white;
-            border: 1px solid #FF6A00;
-            padding: 20px;
-            border-radius: 40px;
+        @media (max-width: 500px) {
+            .buttons {
+                 flex-direction: column !important;
+            }
+        }
+        @media (max-width: 790px) {
+            .container {
+                margin-top: 100px;
+                
+            }
+            .container > h1{
+                font-size: 40px;
+            }
+            .container > p{
+                font-size: 20px !important;
+            }
+        }
+        @media (max-width: 486px) {
+            .container {
+                margin-top: 200px;
+                
+            }
+            
         }
     </style>
 </head>
 <body>
-    
-    <div class="heroSection">
-        {% if user.is_authenticated %}
-        <h1>Empower Your Pharmacy Today!</h1>
-        <p>Welcome to PharmX, your one-stop solution for premium veterinary medicines. Whether you're a veterinary professional or a pet owner, managing your medicines has never been easier. Explore our wide range of products, and enjoy seamless control with features to create, update, and manage your inventory with ease.</p>
-        <div style="display: flex; gap: 20px; margin-top: 20px;"> 
-            <a href="{% url 'Creat-Product' %}">Add New Products</a>
-            <a href="{% url 'All-Products' %}">View All Products</a>
+    <section class="hero-section text-center">
+        <div class="container d-flex flex-column justify-content-center align-items-center">
+          {% if user.is_authenticated %}
+            <h1 class="display-4 fw-bold ">Empower Your Pharmacy Today!</h1>
+          <p class="lh-base w-75 fs-5 text-white text-center">
+            Welcome to PharmX, your one-stop solution for premium veterinary medicines. Whether you're a veterinary professional or a pet owner, managing your medicines has never been easier. Explore our wide range of products, and enjoy seamless control with features to create, update, and manage your inventory with ease.
+          </p>
+          <div class="d-flex  gap-3 mt-4 buttons"> 
+            <a href="{% url 'Creat-Product' %}" class="text-decoration-none text-white border p-3 rounded">Add New Products</a>
+            <a href="{% url 'All-Products' %}" class="text-decoration-none text-white border  p-3 rounded">View All Products</a>
         </div>
         {% else %}
-        <h1>Empower Your Pharmacy Today!</h1>
-        <p>Welcome to PharmX, your one-stop solution for premium veterinary medicines. Whether you're a veterinary professional or a pet owner, managing your medicines has never been easier. Explore our wide range of products, and enjoy seamless control with features to create, update, and manage your inventory with ease.</p>
+        <h1 class="display-4 fw-bold " >Empower Your Pharmacy Today!</h1>
+        <p class="lh-base w-75 fs-5 text-white text-center">Welcome to PharmX, your one-stop solution for premium veterinary medicines. Whether you're a veterinary professional or a pet owner, managing your medicines has never been easier. Explore our wide range of products, and enjoy seamless control with features to create, update, and manage your inventory with ease.</p>
         {% endif %}
-    </div>
+        </div>
+    </section>
+    
 </body>
+
+
+
+
+
+

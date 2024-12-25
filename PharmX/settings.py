@@ -67,11 +67,8 @@ WSGI_APPLICATION = 'PharmX.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'pharmX',
-        'HOST' : 'localhost',
-        'USER' : 'root',
-        'PASSWORD' : 'msrehman@001'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 

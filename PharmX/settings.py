@@ -68,7 +68,7 @@ WSGI_APPLICATION = 'PharmX.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'pharmx',  # Replace with your MySQL database name
+        'NAME': 'pharmX',  # Replace with your MySQL database name
         'USER': 'root',       # Replace with your MySQL username
         'PASSWORD': 'msrehman@001',   # Replace with your MySQL password
         'HOST': 'localhost',           # Use 'localhost' or '127.0.0.1' for your local machine

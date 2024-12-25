@@ -52,7 +52,6 @@
 <body>
     <section class="hero-section text-center">
         <div class="container d-flex flex-column justify-content-center align-items-center">
-          {% if user.is_authenticated %}
             <h1 class="display-4 fw-bold ">Empower Your Pharmacy Today!</h1>
           <p class="lh-base w-75 fs-5 text-white text-center">
             Welcome to PharmX, your one-stop solution for premium veterinary medicines. Whether you're a veterinary professional or a pet owner, managing your medicines has never been easier. Explore our wide range of products, and enjoy seamless control with features to create, update, and manage your inventory with ease.
@@ -61,10 +60,7 @@
             <a href="{% url 'Creat-Product' %}" class="text-decoration-none text-white border p-3 rounded">Add New Products</a>
             <a href="{% url 'All-Products' %}" class="text-decoration-none text-white border  p-3 rounded">View All Products</a>
         </div>
-        {% else %}
-        <h1 class="display-4 fw-bold " >Empower Your Pharmacy Today!</h1>
-        <p class="lh-base w-75 fs-5 text-white text-center">Welcome to PharmX, your one-stop solution for premium veterinary medicines. Whether you're a veterinary professional or a pet owner, managing your medicines has never been easier. Explore our wide range of products, and enjoy seamless control with features to create, update, and manage your inventory with ease.</p>
-        {% endif %}
+        
         </div>
     </section>
     

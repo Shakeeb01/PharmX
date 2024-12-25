@@ -13,7 +13,7 @@ SECRET_KEY = 'django-insecure-q+h@rql&j0$k40!f!cu(@pi@0_!p7$q+0&m^@4dfrfrs#f7n12
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['pharmx.onrender.com']
+ALLOWED_HOSTS = ['127.0.0.1','pharmx.onrender.com']
 
 
 # Application definition
@@ -67,8 +67,11 @@ WSGI_APPLICATION = 'PharmX.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'pharmx',  # Replace with your MySQL database name
+        'USER': 'root',       # Replace with your MySQL username
+        'PASSWORD': 'msrehman@001',   # Replace with your MySQL password
+        'HOST': 'localhost',           # Use 'localhost' or '127.0.0.1' for your local machine
     }
 }
 

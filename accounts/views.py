@@ -41,7 +41,7 @@ def register_user(request):
             user = authenticate(username = username,password = password)           
             login(request,user) 
             messages.success(request,('Registration Successfull!'))
-            return redirect('Main')
+            return redirect('login')
         else:
             form = RegisterUserForm()
     
